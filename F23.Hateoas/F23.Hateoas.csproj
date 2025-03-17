@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>F23.Hateoas</PackageId>
+    <Version>1.1.0</Version>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>feature[23]</Authors>
+    <Description>A set of basic HATEOAS (Hypermedia As The Engine Of Application State) types to help with implementing consistent hypermedia-enabled APIs.</Description>
+    <Copyright>2019, feature[23]</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/feature23/hateoas</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/feature23/hateoas.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>hateoas hypermedia asp.net core mvc api</PackageTags>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="logo.png" Pack="true" PackagePath="\" />
+    <None Include="../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
