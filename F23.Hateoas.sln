@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F23.Hateoas", "F23.Hateoas\F23.Hateoas.csproj", "{20A3B02F-4153-4CA8-80D7-88196B974D61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F23.Hateoas.Sample.NewtonsoftJson", "F23.Hateoas.Sample.NewtonsoftJson\F23.Hateoas.Sample.NewtonsoftJson.csproj", "{B827C132-7AE9-48EB-B8B1-56DD029D242E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F23.Hateoas.Tests", "F23.Hateoas.Tests\F23.Hateoas.Tests.csproj", "{39735FE1-5D95-4BA9-AF6F-86143888CDF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{20A3B02F-4153-4CA8-80D7-88196B974D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20A3B02F-4153-4CA8-80D7-88196B974D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20A3B02F-4153-4CA8-80D7-88196B974D61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B827C132-7AE9-48EB-B8B1-56DD029D242E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B827C132-7AE9-48EB-B8B1-56DD029D242E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B827C132-7AE9-48EB-B8B1-56DD029D242E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B827C132-7AE9-48EB-B8B1-56DD029D242E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39735FE1-5D95-4BA9-AF6F-86143888CDF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39735FE1-5D95-4BA9-AF6F-86143888CDF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39735FE1-5D95-4BA9-AF6F-86143888CDF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39735FE1-5D95-4BA9-AF6F-86143888CDF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

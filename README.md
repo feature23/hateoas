@@ -38,10 +38,10 @@ You might also find it helpful to create a helper method in a controller base cl
 ```csharp
 public class MyBaseController : ControllerBase
 {
-    protected IActionResult HypermediaOk(object data, IList<HypermediaLink> links = null)
+    protected IActionResult HypermediaOk(object content, IList<HypermediaLink>? links = null)
 
     {
-        return Ok(new HypermediaResponse(data) { Links = links });
+        return Ok(new HypermediaResponse(content) { Links = links });
     }
 }
 ```
