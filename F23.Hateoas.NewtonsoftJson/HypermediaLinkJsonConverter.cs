@@ -7,20 +7,24 @@ public class HypermediaLinkJsonConverter : JsonConverter
 {
     public override void WriteJson(JsonWriter writer, object? value, JsonSerializer serializer)
     {
-        var response = (HypermediaLink)value!;
+        if (value is not HypermediaLink link)
+        {
+            writer.WriteNull();
+            return;
+        }
 
         writer.WriteStartObject();
 
         writer.WritePropertyName("rel");
-        serializer.Serialize(writer, response.Rel);
+        serializer.Serialize(writer, link.Rel);
 
         writer.WritePropertyName("href");
-        serializer.Serialize(writer, response.Href);
+        serializer.Serialize(writer, link.Href);
 
-        if (response.Method != null)
+        if (link.Method != null)
         {
             writer.WritePropertyName("method");
-            serializer.Serialize(writer, response.Method);
+            serializer.Serialize(writer, link.Method);
         }
 
         writer.WriteEndObject();

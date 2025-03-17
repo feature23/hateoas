@@ -7,7 +7,11 @@ public class HypermediaResponseJsonConverter : JsonConverter
 {
     public override void WriteJson(JsonWriter writer, object? value, JsonSerializer serializer)
     {
-        var response = (HypermediaResponse)value!;
+        if (value is not HypermediaResponse response)
+        {
+            writer.WriteNull();
+            return;
+        }
 
         writer.WriteStartObject();
 
