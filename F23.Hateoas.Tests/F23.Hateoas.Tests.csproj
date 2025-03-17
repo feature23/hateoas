@@ -1,10 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <!-- NOTE: net6.0 tests netstandard2.0 target -->
+        <TargetFrameworks>net8.0;net6.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-
+        <LangVersion>latest</LangVersion>
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
     </PropertyGroup>
@@ -24,6 +25,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\F23.Hateoas.NewtonsoftJson\F23.Hateoas.NewtonsoftJson.csproj" />
       <ProjectReference Include="..\F23.Hateoas\F23.Hateoas.csproj" />
     </ItemGroup>
 

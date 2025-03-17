@@ -64,3 +64,24 @@ public IActionResult Get()
 ## Contributing
 
 This package is very minimalistic and is not likely to need many updates. If you have a feature request or bug report, please file a GitHub issue. Once accepted by our team, you may submit a pull request. PRs without an accepted issue have a higher likelihood of being rejected.
+
+## Migrating from v1 to v2
+
+Version 2.0.0 of this library introduced a breaking change by removing the Newtonsoft.Json dependency.
+If you need Newtonsoft.Json support, add a reference to the `F23.Hateoas.NewtonsoftJson` package
+and register the `HypermediaResponseJsonConverter` and `HypermediaLinkJsonConverter` with your `JsonSerializerSettings`.
+
+For example, in ASP.NET Core startup:
+
+```csharp
+using F23.Hateoas.NewtonsoftJson;
+
+...
+
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+    {
+        options.SerializerSettings.Converters.Add(new HypermediaResponseJsonConverter());
+        options.SerializerSettings.Converters.Add(new HypermediaLinkJsonConverter());
+    });
+```

@@ -1,6 +1,3 @@
-using F23.Hateoas;
-using F23.Hateoas.NewtonsoftJson;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,12 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddControllers()
-    .AddNewtonsoftJson(options =>
-    {
-        options.SerializerSettings.Converters.Add(new HypermediaResponseJsonConverter());
-        options.SerializerSettings.Converters.Add(new HypermediaLinkJsonConverter());
-    });
+builder.Services.AddControllers(); // uses System.Text.Json by default
 
 var app = builder.Build();
 

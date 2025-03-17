@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F23.Hateoas.Sample.Newtonso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F23.Hateoas.Tests", "F23.Hateoas.Tests\F23.Hateoas.Tests.csproj", "{39735FE1-5D95-4BA9-AF6F-86143888CDF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F23.Hateoas.NewtonsoftJson", "F23.Hateoas.NewtonsoftJson\F23.Hateoas.NewtonsoftJson.csproj", "{7C417AE9-084E-4076-AB10-6AF96A663567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F23.Hateoas.Sample.SystemTextJson", "F23.Hateoas.Sample.SystemTextJson\F23.Hateoas.Sample.SystemTextJson.csproj", "{E40C060B-432F-4FB1-9B6C-579D3AB64228}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{39735FE1-5D95-4BA9-AF6F-86143888CDF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39735FE1-5D95-4BA9-AF6F-86143888CDF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39735FE1-5D95-4BA9-AF6F-86143888CDF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C417AE9-084E-4076-AB10-6AF96A663567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C417AE9-084E-4076-AB10-6AF96A663567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C417AE9-084E-4076-AB10-6AF96A663567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C417AE9-084E-4076-AB10-6AF96A663567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E40C060B-432F-4FB1-9B6C-579D3AB64228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E40C060B-432F-4FB1-9B6C-579D3AB64228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E40C060B-432F-4FB1-9B6C-579D3AB64228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E40C060B-432F-4FB1-9B6C-579D3AB64228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

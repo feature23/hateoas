@@ -1,25 +1,15 @@
-using F23.Hateoas.NewtonsoftJson;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace F23.Hateoas.Tests;
 
-public class NewtonsoftJsonSerializationTests
+public class SystemTextJsonSerializationTests
 {
-    private static readonly JsonSerializerSettings _settings = new JsonSerializerSettings
-    {
-        Converters =
-        {
-            new HypermediaResponseJsonConverter(),
-            new HypermediaLinkJsonConverter(),
-        }
-    };
-
     [Fact]
     public void Serialize_WithNullLinks_ShouldNotIncludeLinks()
     {
         var response = new HypermediaResponse(42);
 
-        var json = JsonConvert.SerializeObject(response, _settings);
+        var json = JsonSerializer.Serialize(response);
 
         Assert.Equal("""{"content":42}""", json);
     }
@@ -36,7 +26,7 @@ public class NewtonsoftJsonSerializationTests
             }
         };
 
-        var json = JsonConvert.SerializeObject(response, _settings);
+        var json = JsonSerializer.Serialize(response);
 
         Assert.Equal("""{"content":42,"_links":[{"rel":"self","href":"/api/example"},{"rel":"google","href":"https://www.google.com","method":"GET"}]}""", json);
     }
