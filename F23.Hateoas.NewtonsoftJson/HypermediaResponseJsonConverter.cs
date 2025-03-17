@@ -34,7 +34,7 @@ public class HypermediaResponseJsonConverter : JsonConverter
         writer.WriteEndObject();
     }
 
-    public override object? ReadJson(JsonReader reader, Type objectType, object? existingValue, JsonSerializer serializer)
+    public override object ReadJson(JsonReader reader, Type objectType, object? existingValue, JsonSerializer serializer)
     {
         var jsonObject = JObject.Load(reader);
 
