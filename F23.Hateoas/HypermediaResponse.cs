@@ -2,11 +2,11 @@
 
 namespace F23.Hateoas;
 
-public class HypermediaResponse(object content)
+public class HypermediaResponse(object? content)
 {
     [JsonPropertyName("content")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
-    public object Content { get; } = content;
+    public object? Content { get; } = content;
 
     [JsonPropertyName("_links")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
